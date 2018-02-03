@@ -1,0 +1,9 @@
+---
+- name: get operating system
+  set_fact:
+    os_name: |-
+      {% if ansible_distribution|lower in ("redhat", "centos") -%}
+        redhat
+      {%- else -%}
+        {{ ansible_distribution|lower }}
+      {%- endif %}

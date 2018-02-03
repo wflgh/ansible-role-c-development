@@ -1,0 +1,11 @@
+---
+
+- name: install the 'Development tools' package group
+  yum:
+    name: "@Development tools"
+    state: latest
+
+- name: install the latest version of ccache
+  yum:
+    name: ccache
+    state: latest
