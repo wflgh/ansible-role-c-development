@@ -1,0 +1,12 @@
+---
+
+- name: discover operating system
+  include_tasks: discovery/os.yml
+
+- name: configure RHEL/CentOS
+  import_tasks: rhel.yml
+  when: os_name == 'redhat'
+
+- name: configure Ubuntu
+  import_tasks: ubuntu.yml
+  when: os_name == 'ubuntu'

@@ -1,0 +1,6 @@
+---
+
+- name: install build-essential package
+  apt:
+    name: build-essential
+    state: latest
